@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: [],
+  initialState: [], 
   reducers: {
     addToCart: (state, action) => {
       // check if item already exists, then increase quantity

@@ -41,12 +41,16 @@ const Login = () => {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
             Sign in to your account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-2 font-bold text-center text-sm text-gray-600 dark:text-gray-400">
+            <div className='mb-4'>      
             Or{' '}
+            </div>
+
             <Link
               to="/register"
-              className="font-medium text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 transition-colors"
+              className="font-medium text-primary-600 hover:text-primary-500 dark:text-sec-500 dark:hover:text-primary-300 transition-colors py-2  px-2 rounded border  border-primary-500 dark:border-sec-500 transition"
             >
+    
               create a new account
             </Link>
           </p>
@@ -142,19 +146,10 @@ const Login = () => {
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full border-t border-gray-300 dark:border-gray-600"></div>
                     </div>
-                    <div className="relative flex justify-center text-sm">
-                      <span className="px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400">
-                        Demo credentials
-                      </span>
-                    </div>
+
                   </div>
                   
-                  <div className="mt-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
-                    <p className="text-sm text-blue-700 dark:text-blue-300 text-center">
-                      <strong>Email:</strong> test@test.com<br />
-                      <strong>Password:</strong> 123456
-                    </p>
-                  </div>
+
                 </div>
               </Form>
             )}
