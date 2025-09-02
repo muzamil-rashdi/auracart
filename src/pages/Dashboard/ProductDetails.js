@@ -13,18 +13,34 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const { data: product, loading, error } = useFetch(() => getProductById(id), [id]);
   const dispatch = useDispatch();
+  
+  // ✅ Check auth state
+  const { user } = useSelector((state) => state.auth);
   const favorites = useSelector(state => state.favorites);
   const isFavorite = favorites.some(item => item.id === product?.id);
+  
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
+    // ✅ Check if user is logged in
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+    
     for (let i = 0; i < quantity; i++) {
       dispatch(addToCart({ ...product, quantity: 1 }));
     }
   };
 
   const handleToggleFavorite = () => {
+    // ✅ Check if user is logged in
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+    
     if (isFavorite) {
       dispatch(removeFavorite(product.id));
     } else {

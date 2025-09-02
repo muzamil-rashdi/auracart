@@ -10,7 +10,7 @@ import Cart from './pages/Cart/Cart';
 import Favorites from './pages/Favorites/Favorites';
 import Profile from './pages/Profile/Profile';
 import ProductDetails from './pages/Dashboard/ProductDetails';
-
+import Checkout from "./pages/Checkout/Checkout";
 function App() {
   const { mode } = useTheme();
 
@@ -39,6 +39,12 @@ function App() {
             <Route path="/profile" element={
               <ProtectedRoute>
                 <Profile />
+              </ProtectedRoute>
+            } />
+            
+            <Route path="/checkout" element={
+              <ProtectedRoute>
+                <Checkout />
               </ProtectedRoute>
             } />
           </Routes>
