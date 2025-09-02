@@ -182,6 +182,7 @@ const ProductDetails = () => {
                 <span className="px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white min-w-[3rem] text-center">
                   {quantity}
                 </span>
+                
                 <button
                   onClick={() => handleQuantityChange(1)}
                   className="px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -253,7 +254,7 @@ const ProductDetails = () => {
       </div>
     </div>
   );
-  
+
 };
 
 export default ProductDetails;
